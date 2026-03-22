@@ -1,261 +1,242 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Daisy Portfolio</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daisy Fragoso — Portfolio</title>
+  <link href="style.css" rel="stylesheet">
+  <style>
+  </style>
 </head>
+<body>
 
-<body class="w3-light-grey w3-content" style="max-width:1600px">
+<!-- Hamburger -->
+<button class="hamburger" onclick="openSidebar()" aria-label="Open menu">☰</button>
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
-  <div class="w3-container">
-    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
-      <i class="fa fa-remove"></i>
+<!-- Overlay -->
+<div id="overlay" onclick="closeSidebar()"></div>
+
+<!-- SIDEBAR -->
+<aside id="sidebar">
+  <div class="sidebar-profile">
+    <img src="/images/Party-2.png" alt="Daisy" class="sidebar-avatar">
+    <div class="sidebar-name">Daisy Fragoso</div>
+    <div class="sidebar-tag">Software Engineer</div>
+    <span class="sidebar-badge">🚧 Under Construction</span>
+  </div>
+
+  <nav>
+    <a href="#portfolio" class="active">
+      <span class="icon">◈</span> Portfolio
     </a>
-    <img src="/images/Party-2.png" style="width:45%;" class="w3-round"><br><br>
-    <h4><b>PORTFOLIO (still under construction)</b></h4>
-    <!-- <p class="w3-text-grey">Template by W3.CSS</p> -->
+    <a href="#about">
+      <span class="icon">◉</span> About
+    </a>
+    <a href="#jobexperience">
+      <span class="icon">◎</span> Experience
+    </a>
+  </nav>
+
+  <div class="sidebar-footer">
+    <a href="https://www.linkedin.com/in/daisyfragoso" class="linkedin-link" target="_blank">
+      <span class="linkedin-dot"></span>
+      linkedin.com/in/daisyfragoso
+    </a>
   </div>
-  <div class="w3-bar-block">
-    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a> 
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
-    <a href="#jobexperience" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>Previous Work</a>
-  </div>
-  <div class="w3-panel w3-large">
-    <!-- <i class="fa fa-facebook-official w3-hover-opacity">Facebook</i><br> -->
-    <!-- <i class="fa fa-instagram w3-hover-opacity"></i><br> -->
-    <!-- <i class="fa fa-snapchat w3-hover-opacity"></i> -->
-    <!-- <i class="fa fa-pinterest-p w3-hover-opacity"></i> -->
-    <!-- <i class="fa fa-twitter w3-hover-opacity"></i> -->
-    <!-- <i class="fa fa-linkedin w3-hover-opacity"></i> -->
-     <p><a href="https://www.linkedin.com/in/daisyfragoso">
-        <img src="LI-Logo.png" alt="Linkedin" width="100" height="28">
-        <p>www.linkedin.com/in/daisyfragoso</p>
-        </a>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero" id="portfolio">
+    <div class="hero-eyebrow">✦ Creative Developer & Game Designer</div>
+    <h1>
+      My<br>
+      <span class="outline">Portfolio</span>
+    </h1>
+    <p class="hero-desc">
+      Building games, simulations, and interactive experiences. Passionate about making technology accessible and playful.
     </p>
-  </div>
-</nav>
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:300px">
-
-  <!-- Header -->
-  <header id="portfolio">
-    <a href="#"><img src="/images/Party-2.png" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
-    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-    <div class="w3-container">
-    <h1><b>My Portfolio</b></h1>
-    <!-- <div class="w3-section w3-bottombar w3-padding-16">
-      <span class="w3-margin-right">Filter:</span> 
-      <button class="w3-button w3-black">ALL</button>
-      <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Design</button>
-      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Photos</button>
-      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Art</button>
-    </div> -->
+    <div class="hero-line">
+      <span class="skill-pill">Python</span>
+      <span class="skill-pill">JavaScript</span>
+      <span class="skill-pill">Unity</span>
+      <span class="skill-pill">WebGL</span>
+      <span class="skill-pill">Machine Learning</span>
     </div>
-  </header>
-  
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding">
-    
-    <!-- First game -->
-    <div class="w3-third w3-container w3-margin-bottom">
-      <a href = "https://daisyfragoso.github.io/CMPM120FinalProject/" target="2dplatformer">
-        <img src="2dplatformer.png" alt="2dplat" style="width:100%" class="w3-hover-opacity">
-      </a>
-        <div class="w3-container w3-white">
-        <p><b>2D platformer</b></p>
-        <p>2D platformer with two levels inspired by  Fireboy and Watergirl</p>
-      </div>
-    </div>
+  </section>
 
-    <!-- Second Game -->
-    <div class="w3-third w3-container w3-margin-bottom">
-      <a href = "https://daisyfragoso.github.io/Assignment0/asg0.html" target="vectors">
-        <img src="vectorAssignment.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      </a>
-        <div class="w3-container w3-white">
-        <p><b>Scalar (Art)</b></p>
-        <p>CSE 160 assignment</p>
-      </div>
-    </div>
-
-    <!-- Third Game -->
-    <div class="w3-third w3-container">
-      <a href = "https://daisyfragoso.github.io/shooter/" target="shooterphraser">
-        <img src="Shooter.png" alt="shooter" style="width:100%" class="w3-hover-opacity">
-      </a>
-      <div class="w3-container w3-white">
-        <p><b>Shooter Phraser game</b></p>
-        <p>Move player WASD</p>
-        <p>Shoot -> space button</p>
-
-      </div>
-    </div>
-  </div>
-  
-  <!-- <div class="w3-row-padding"> -->
-    <!-- Fourth game (tbd) -->
-    <div class="w3-third w3-container w3-margin-bottom">
-      <a href="https://daisyfragoso.github.io/assignment2/asg2.html" target="first_2d">
-        <img src="/images/blocky.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      </a>
-      <div class="w3-container w3-white">
-        <p><b>3d blocky animal</b></p>
-        <p>Webgl blocky animal with added animation throught (button or shift+click)</p>
-      </div>
-    </div>
-
-    
-<!-- https://gd.games/sramir71/agent-bond -->
-
-    <!-- fifth game (tbd) -->
-    <div class="w3-third w3-container w3-margin-bottom">
-      <a href="https://gd.games/sramir71/agent-bond" target="first_2d">
-        <img src="/images/AgentBond.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      </a>
-      <div class="w3-container w3-white">
-        <p><b>AgentBond - GDgame</b></p>
-        <p>Gd game similar to donkey kong</p>
-      </div>
-    </div>
-
-<!-- https://sophiedegeorge.itch.io/cmpm-170-prototype-4-group-12 -->
-    <!-- sixth game (tbd) -->
-    <div class="w3-third w3-container">
-      <a href="https://geckotrees.itch.io/the-game" target="first_2d">
-        <img src="/images/Unityhorror.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      </a>
-      <div class="w3-container w3-white">
-        <p><b>Unity horror game</b></p>
-        <p>Worked on the player movements. <br>WASD for player movements. Hold shift to sprint (watch the sprint bar ). C for crouch. Space tp jump </p>
-      </div>
-    </div>
-  <!-- </div>  -->
-
-  <!-- Pagination (side show listing)
-  <div class="w3-center w3-padding-32">
-    <div class="w3-bar">
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
-    </div>
-  </div> -->
-
-  <!-- Image Gallery -->
-  <div class="w3-row-padding w3-padding-16" id="about"></div>
-
-  <!-- Pagination -->
-  <div class="w3-center w3-padding-32">
-    <div class="w3-bar" id="pagination"></div>
+  <!-- Portfolio grid header -->
+  <div class="section-divider">
+    <h2>✦ Selected Work</h2>
+    <div class="divider-line"></div>
+    <span class="divider-count">06 projects</span>
   </div>
 
-  <!-- Canva images created by me -->
-  <!-- <div class="w3-row-padding w3-padding-16" id="about">
-    <div class="w3-col m6">
-      <img src="../images/Community space 2 - fall 25.png" alt="Me" style="width:100%">
+  <!-- Grid -->
+  <div class="portfolio-grid">
+
+    <!-- 1 -->
+    <a class="card" href="https://daisyfragoso.github.io/CMPM120FinalProject/" target="_blank">
+      <img src="2dplatformer.png" alt="2D platformer" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="card-placeholder" style="display:none">🎮</div>
+      <div class="card-overlay">
+        <div class="card-tag">Platformer · JavaScript</div>
+        <div class="card-title">2D Platformer</div>
+        <div class="card-desc">Two-level platformer inspired by Fireboy &amp; Watergirl</div>
+      </div>
+      <div class="card-arrow">↗</div>
+    </a>
+
+    <!-- 2 -->
+    <a class="card" href="https://daisyfragoso.github.io/Assignment0/asg0.html" target="_blank">
+      <img src="vectorAssignment.png" alt="Scalar Art" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="card-placeholder" style="display:none">🎨</div>
+      <div class="card-overlay">
+        <div class="card-tag">Graphics · WebGL</div>
+        <div class="card-title">Scalar (Art)</div>
+        <div class="card-desc">CSE 160 vector assignment — interactive canvas drawing</div>
+      </div>
+      <div class="card-arrow">↗</div>
+    </a>
+
+    <!-- 3 -->
+    <a class="card" href="https://daisyfragoso.github.io/shooter/" target="_blank">
+      <img src="Shooter.png" alt="Shooter Phraser" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="card-placeholder" style="display:none">🔫</div>
+      <div class="card-overlay">
+        <div class="card-tag">Shooter · WASD + Space</div>
+        <div class="card-title">Shooter Phraser</div>
+        <div class="card-desc">WASD to move · Space to shoot</div>
+      </div>
+      <div class="card-arrow">↗</div>
+    </a>
+
+    <!-- 4 -->
+    <a class="card" href="https://daisyfragoso.github.io/assignment2/asg2.html" target="_blank">
+      <img src="/images/blocky.png" alt="3D Blocky Animal" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="card-placeholder" style="display:none">🦴</div>
+      <div class="card-overlay">
+        <div class="card-tag">3D · WebGL</div>
+        <div class="card-title">3D Blocky Animal</div>
+        <div class="card-desc">WebGL blocky animal with button &amp; shift+click animation</div>
+      </div>
+      <div class="card-arrow">↗</div>
+    </a>
+
+    <!-- 5 -->
+    <a class="card" href="https://gd.games/sramir71/agent-bond" target="_blank">
+      <img src="/images/AgentBond.png" alt="Agent Bond" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="card-placeholder" style="display:none">🕹️</div>
+      <div class="card-overlay">
+        <div class="card-tag">GDevelop · Arcade</div>
+        <div class="card-title">Agent Bond</div>
+        <div class="card-desc">GDevelop game inspired by Donkey Kong</div>
+      </div>
+      <div class="card-arrow">↗</div>
+    </a>
+
+    <!-- 6 -->
+    <a class="card" href="https://geckotrees.itch.io/the-game" target="_blank">
+      <img src="/images/Unityhorror.png" alt="Unity Horror" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="card-placeholder" style="display:none">👻</div>
+      <div class="card-overlay">
+        <div class="card-tag">Unity · Horror</div>
+        <div class="card-title">Unity Horror Game</div>
+        <div class="card-desc">WASD · Shift sprint · C crouch · Space jump</div>
+      </div>
+      <div class="card-arrow">↗</div>
+    </a>
+
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-left">
+      <h2>Building<br>things that<br><em>matter.</em></h2>
+      <p>
+        Software Engineer with a passion for developing innovative solutions and a strong foundation in machine learning and data analysis. Leveraging skills in Python, JavaScript, and C++ to enhance data-driven insights and improve prediction accuracy. Committed to fostering inclusivity and collaboration in STEM initiatives.
+      </p>
     </div>
-    <div class="w3-col m6">
-      <img src="/images/Party-2.png" alt="Me" style="width:100%">
+
+    <div class="skills-grid">
+      <div>
+        <div class="skills-group-label">✦ Technical Skills</div>
+        <div class="skills-tags">
+          <span class="skill-tag ">Python</span>
+          <span class="skill-tag ">JavaScript</span>
+          <span class="skill-tag ">C++</span>
+          <span class="skill-tag">HTML &amp; CSS</span>
+          <span class="skill-tag">NumPy</span>
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">Scikit-learn</span>
+          <span class="skill-tag">Machine Learning</span>
+          <span class="skill-tag">WebGL</span>
+          <span class="skill-tag">Data Structures</span>
+          <span class="skill-tag">Data Analysis</span>
+          <span class="skill-tag">Kinematic Data</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="skills-group-label">✦ Tools &amp; Platforms</div>
+        <div class="skills-tags">
+          <span class="skill-tag">Unity</span>
+          <span class="skill-tag">Figma</span>
+          <span class="skill-tag">GitHub</span>
+          <span class="skill-tag">Google Drive</span>
+          <span class="skill-tag">MS Office</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="skills-group-label">✦ Soft Skills</div>
+        <div class="skills-tags">
+          <span class="skill-tag">Critical Thinking</span>
+          <span class="skill-tag">Team Work</span>
+          <span class="skill-tag">Problem Solving</span>
+          <span class="skill-tag">Multitasking</span>
+          <span class="skill-tag">Attention to Detail</span>
+          <span class="skill-tag">Time Management</span>
+        </div>
+      </div>
     </div>
-  </div> -->
+  </section>
 
-  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
-    <h4><b>About Me</b></h4>
-    <p> Software Engineer with a passion for developing innovative solutions and a 
-      strong foundation in machine learning and data analysis. Leveraging skills in
-       Python, JavaScript, and C++ to enhance data-driven insights and improve 
-       prediction accuracy. Committed to fostering inclusivity and collaboration in 
-       STEM initiatives, aiming to drive future advancements in technology.</p>
-    <hr>
-    
-    <h4>Technical Skills</h4> 
-    <ul>
-        <li>Python (Expert)</li>
-        <li>NumPy</li>
-        <li>HTML, CSS, JS (Proficient)</li>
-        <li>Zero-order Coefficients</li>
-        <li>Github</li>
-        <li>Unity</li>
-        <li>Computer Skills (Google drive & MS Office)</li>
-        <li>Time management</li>
-    </ul>
-      
-    <h4><br>Professional Experience</h4>
-    <ul>
-        <li>C++ (Proficient)</li>
-        <li>Data Structures</li>
-        <li>Pandas</li>
-        <li>Machine Learning</li>
-        <li>Critical Thinking</li>
-        <li>Multitasking</li>
-        <li>Problem Solving</li>
-        <li>Data Modeling</li>
-        <li>Scikit-learn</li>
-        <li>Data Analysis & Processing</li>
-        <li>Kinematic Data Analysis</li>
-        <li>Figma</li>
-        <li>Team Work</li>
-        <li>Attention to detail</li>
-    </ul>  
+  <!-- Footer -->
+  <footer id="jobexperience">
+    <p>© 2026 Daisy Fragoso — All rights reserved</p>
+    <div class="footer-dot" title="Available for opportunities"></div>
+    <p>Built with ♥ and a lot of coffee</p>
+  </footer>
 
-
-    <hr>
-  
-  
-  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
-
-  <div class="w3-row-padding w3-padding-16" id="jobexperience"></div>
-<!-- End page content -->
-</div>
-
+</main>
 
 <script>
-// Script to open and close sidebar
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
+  function openSidebar() {
+    document.getElementById('sidebar').classList.add('open');
+    document.getElementById('overlay').classList.add('open');
+  }
+  function closeSidebar() {
+    document.getElementById('sidebar').classList.remove('open');
+    document.getElementById('overlay').classList.remove('open');
+  }
+
+  // Active nav link on scroll
+  const sections = ['portfolio','about','jobexperience'];
+  const navLinks = document.querySelectorAll('nav a');
+  window.addEventListener('scroll', () => {
+    let current = 'portfolio';
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && window.scrollY >= el.offsetTop - 200) current = id;
+    });
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
 </script>
 </body>
 </html>
-
-
-
-
-<!-- notes  -->
-    <!-- <p>Photography</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:95%">95%</div>
-    </div>
-    <p>Web Design</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:85%">85%</div>
-    </div>
-    <p>Photoshop</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:80%">80%</div>
-    </div>
-    <p>
-      <button class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
-        <i class="fa fa-download w3-margin-right"></i>Download Resume
-      </button>
-    </p> -->
