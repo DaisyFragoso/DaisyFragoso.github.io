@@ -1,73 +1,56 @@
-// Script to open and close sidebar
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
+function openSidebar() {
+    document.getElementById('sidebar').classList.add('open');
+    document.getElementById('overlay').classList.add('open');
+  }
+function closeSidebar() {
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('overlay').classList.remove('open');
 }
 
-  const images = [
-    "../images/Community Space Board game.png.png",
-    "../images/Professional Tax Preparation Service.png",
-    "../images/Paint w RSP-4.png",
-    "../images/Happy day of the dead wRSP.png",
-    "../images/Giving thanks with RSP-2.png",
-    "../images/Save the Date RSP - Fall 2025-6.png",
-    "../images/Winter Holiday with RSP-2.png",
-    "../images/Winter Welcome.png",
-    "../images/Party-2.png"
-  ];
+// Active nav link on scroll
+const sections = ['portfolio','about','jobexperience'];
+const navLinks = document.querySelectorAll('nav a');
+window.addEventListener('scroll', () => {
+  let current = 'portfolio';
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && window.scrollY >= el.offsetTop - 200) current = id;
+  });
+  navLinks.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+});
 
-  const imagesPerPage = 2;
-  let currentPage = 1;
+// Carousel
+const track = document.getElementById('carouselTrack');
+const dotsContainer = document.getElementById('carouselDots');
+const slides = document.querySelectorAll('.flyer-slide');
 
-  function renderGallery(page) {
-    const gallery = document.getElementById("about");
-    gallery.innerHTML = "";
+let current = 0;
+let timer;
 
-    const start = (page - 1) * imagesPerPage;
-    const end = start + imagesPerPage;
-    const pageImages = images.slice(start, end);
+// Build dots
+slides.forEach((_, i) => {
+  const dot = document.createElement('button');
+  dot.className = 'dot' + (i === 0 ? ' active' : '');
+  dot.onclick = () => goTo(i);
+  dotsContainer.appendChild(dot);
+});
 
-    pageImages.forEach(src => {
-      const col = document.createElement("div");
-      col.className = "w3-col m6";
+function goTo(index) {
+  current = (index + slides.length) % slides.length;
+  track.style.transform = `translateX(-${current * 100}%)`;
+  dotsContainer.querySelectorAll('.dot').forEach((d, i) =>
+    d.classList.toggle('active', i === current)
+  );
+}
 
-      const img = document.createElement("img");
-      img.src = src;
-      img.style.width = "100%";
+function startTimer() {
+  timer = setInterval(() => goTo(current + 1), 8000);
+}
 
-      col.appendChild(img);
-      gallery.appendChild(col);
-    });
-  }
+// Pause on hover
+track.parentElement.addEventListener('mouseenter', () => clearInterval(timer));
+track.parentElement.addEventListener('mouseleave', startTimer);
 
-  function renderPagination() {
-    const totalPages = Math.ceil(images.length / imagesPerPage);
-    const pagination = document.getElementById("pagination");
-    pagination.innerHTML = "";
-
-    for (let i = 1; i <= totalPages; i++) {
-      const btn = document.createElement("a");
-      btn.href = "#";
-      btn.textContent = i;
-      btn.className =
-        "w3-bar-item w3-button " + (i === currentPage ? "w3-black" : "w3-hover-black");
-
-      btn.onclick = (e) => {
-        e.preventDefault();
-        currentPage = i;
-        renderGallery(currentPage);
-        renderPagination();
-      };
-
-      pagination.appendChild(btn);
-    }
-  }
-
-  // Initial render
-  renderGallery(currentPage);
-  renderPagination();
+startTimer();

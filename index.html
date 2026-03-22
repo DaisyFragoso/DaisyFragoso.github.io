@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daisy Fragoso — Portfolio</title>
   <link href="style.css" rel="stylesheet">
-  <style>
-  </style>
 </head>
 <body>
 
@@ -80,7 +78,7 @@
 
     <!-- 1 -->
     <a class="card" href="https://daisyfragoso.github.io/CMPM120FinalProject/" target="_blank">
-      <img src="2dplatformer.png" alt="2D platformer" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <img src="images/2dplatformer.png" alt="2D platformer" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
       <div class="card-placeholder" style="display:none">🎮</div>
       <div class="card-overlay">
         <div class="card-tag">Platformer · JavaScript</div>
@@ -92,7 +90,7 @@
 
     <!-- 2 -->
     <a class="card" href="https://daisyfragoso.github.io/Assignment0/asg0.html" target="_blank">
-      <img src="vectorAssignment.png" alt="Scalar Art" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <img src="images/vectorAssignment.png" alt="Scalar Art" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
       <div class="card-placeholder" style="display:none">🎨</div>
       <div class="card-overlay">
         <div class="card-tag">Graphics · WebGL</div>
@@ -104,8 +102,8 @@
 
     <!-- 3 -->
     <a class="card" href="https://daisyfragoso.github.io/shooter/" target="_blank">
-      <img src="Shooter.png" alt="Shooter Phraser" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-      <div class="card-placeholder" style="display:none">🔫</div>
+      <img src="images/Shooter.png" alt="Shooter Phraser" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="card-placeholder" style="display:none">🎮</div>
       <div class="card-overlay">
         <div class="card-tag">Shooter · WASD + Space</div>
         <div class="card-title">Shooter Phraser</div>
@@ -117,7 +115,7 @@
     <!-- 4 -->
     <a class="card" href="https://daisyfragoso.github.io/assignment2/asg2.html" target="_blank">
       <img src="/images/blocky.png" alt="3D Blocky Animal" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-      <div class="card-placeholder" style="display:none">🦴</div>
+      <div class="card-placeholder" style="display:none">🎮</div>
       <div class="card-overlay">
         <div class="card-tag">3D · WebGL</div>
         <div class="card-title">3D Blocky Animal</div>
@@ -129,7 +127,7 @@
     <!-- 5 -->
     <a class="card" href="https://gd.games/sramir71/agent-bond" target="_blank">
       <img src="/images/AgentBond.png" alt="Agent Bond" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-      <div class="card-placeholder" style="display:none">🕹️</div>
+      <div class="card-placeholder" style="display:none">🎮</div>
       <div class="card-overlay">
         <div class="card-tag">GDevelop · Arcade</div>
         <div class="card-title">Agent Bond</div>
@@ -141,7 +139,7 @@
     <!-- 6 -->
     <a class="card" href="https://geckotrees.itch.io/the-game" target="_blank">
       <img src="/images/Unityhorror.png" alt="Unity Horror" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-      <div class="card-placeholder" style="display:none">👻</div>
+      <div class="card-placeholder" style="display:none">🎮</div>
       <div class="card-overlay">
         <div class="card-tag">Unity · Horror</div>
         <div class="card-title">Unity Horror Game</div>
@@ -150,7 +148,70 @@
       <div class="card-arrow">↗</div>
     </a>
 
+  </div> 
+
+<!-- FLYERS Header -->
+<div class="section-divider" style="margin-top: 3rem;">
+  <h2>✦ Program Assistant Flyers</h2>
+  <div class="divider-line"></div>
+  <span class="divider-count">Canvas designs</span>
+</div>
+  <!-- FLYERS CAROUSEL -->
+<section id="flyers" style="padding: 0 4rem 5rem; position: relative;">
+  <div style="display: flex; align-items: center; gap: 1rem;">
+    
+    <!-- LEFT ARROW -->
+    <button onclick="goTo(current - 1); resetTimer();" style="
+      flex-shrink: 0;
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--text);
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s;
+    " onmouseover="this.style.borderColor='var(--accent)'; this.style.color='var(--accent)'"
+       onmouseout="this.style.borderColor='var(--border)'; this.style.color='var(--text)'">
+      ←
+    </button>
+
+    <!-- CAROUSEL -->
+    <div class="carousel-track-wrapper" style="flex: 1;">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="flyer-slide"><img src="flyers/flyer1.png" alt="Flyer 1"></div>
+        <div class="flyer-slide"><img src="flyers/flyer2.png" alt="Flyer 2"></div>
+        <div class="flyer-slide"><img src="flyers/flyer3.png" alt="Flyer 3"></div>
+        <div class="flyer-slide"><img src="flyers/flyer4.png" alt="Flyer 4"></div>
+        <div class="flyer-slide"><img src="flyers/flyer5.png" alt="Flyer 5"></div>
+        <div class="flyer-slide"><img src="flyers/flyer6.png" alt="Flyer 6"></div>
+        <div class="flyer-slide"><img src="flyers/flyer7.png" alt="Flyer 7"></div>
+      </div>
+    </div>
+
+    <!-- RIGHT ARROW -->
+    <button onclick="goTo(current + 1); resetTimer()" style="
+      flex-shrink: 0;
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--text);
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s;
+    " onmouseover="this.style.borderColor='var(--accent)'; this.style.color='var(--accent)'"
+       onmouseout="this.style.borderColor='var(--border)'; this.style.color='var(--text)'">
+      →
+    </button>
+
   </div>
+
+  <!-- Dots -->
+  <div class="carousel-dots" id="carouselDots"></div>
+</section>
 
   <!-- ABOUT -->
   <section id="about">
@@ -209,34 +270,10 @@
   <footer id="jobexperience">
     <p>© 2026 Daisy Fragoso — All rights reserved</p>
     <div class="footer-dot" title="Available for opportunities"></div>
-    <p>Built with ♥ and a lot of coffee</p>
   </footer>
 
 </main>
 
-<script>
-  function openSidebar() {
-    document.getElementById('sidebar').classList.add('open');
-    document.getElementById('overlay').classList.add('open');
-  }
-  function closeSidebar() {
-    document.getElementById('sidebar').classList.remove('open');
-    document.getElementById('overlay').classList.remove('open');
-  }
-
-  // Active nav link on scroll
-  const sections = ['portfolio','about','jobexperience'];
-  const navLinks = document.querySelectorAll('nav a');
-  window.addEventListener('scroll', () => {
-    let current = 'portfolio';
-    sections.forEach(id => {
-      const el = document.getElementById(id);
-      if (el && window.scrollY >= el.offsetTop - 200) current = id;
-    });
-    navLinks.forEach(a => {
-      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-    });
-  });
-</script>
+<script src="script.js"></script>
 </body>
 </html>
